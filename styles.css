@@ -1,0 +1,122 @@
+/* CSS utama */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.content {
+  padding: 20px;
+}
+
+.front-background {
+  background-image: url('amar.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start; /* Posisi teks di pojok kiri atas */
+  align-items: flex-start; /* Posisi teks di pojok kiri atas */
+  text-align: left; /* Teks kiri */
+  padding: 20px; /* Padding untuk ruang di sekitar teks */
+  color: rgb(224, 15, 15);
+}
+
+.front-background .content {
+  padding: 20px;
+}
+
+.front-background h1 {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  font-size: 36px; /* Ukuran teks diperbesar */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media queries untuk tampilan handphone dan tablet */
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 5px 0; /* Padding header diubah untuk perangkat dengan lebar layar lebih kecil */
+  }
+
+  nav ul li a {
+    padding: 5px 10px; /* Padding link diubah untuk perangkat dengan lebar layar lebih kecil */
+  }
+
+  .front-background h1 {
+    font-size: 24px; /* Ukuran teks dikurangi untuk perangkat dengan lebar layar lebih kecil */
+  }
+}
+
+/* Media queries untuk tampilan laptop dan layar yang lebih besar */
+@media only screen and (min-width: 769px) {
+  .front-background {
+    padding: 50px; /* Padding diubah untuk perangkat dengan lebar layar lebih besar */
+  }
+
+  .front-background h1 {
+    font-size: 48px; /* Ukuran teks diperbesar untuk perangkat dengan lebar layar lebih besar */
+  }
+}
